@@ -28,5 +28,4 @@ class AtariCloningDataset(Dataset):
         y = arr["actions"]
         y = torch.from_numpy(y)
         x = np.transpose(x, [0, 3, 1, 2])  # channel first
-        x = torch.from_numpy(x.astype(np.float32) / 255)
         return x, y
